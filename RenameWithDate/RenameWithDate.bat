@@ -1,0 +1,2 @@
+python RenameWithDate.py
+pause

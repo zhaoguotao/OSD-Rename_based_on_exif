@@ -1,0 +1,2 @@
+python DumpRename.py
+pause
