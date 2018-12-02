@@ -41,8 +41,9 @@ def getExif(filename):
     org_filename_first=filename.split('-')[0]
 
     if EXIF_CAPDATE in tags:
-        new_first_name = "IMG_" + str(tags[EXIF_CAPDATE]).replace(':', '').replace(' ', '_')
+        new_first_name = str(tags[EXIF_CAPDATE]).replace(':', '').replace(' ', '')
         new_name=new_first_name+os.path.splitext(filename)[1]
+        #~ new_name=filename.replace(org_filename_first,new_first_name)
         print('新文件名：', new_name)
         print("-"*50)
         os.rename(filename, new_name)
